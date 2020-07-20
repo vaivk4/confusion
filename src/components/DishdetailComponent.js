@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {card, CardImg, CardBody, CardText, CardTitle } from 'reactstrap';
+import {Card, CardImg, CardBody, CardText, CardTitle } from 'reactstrap';
 
 class Dishdetail extends Component {
 
@@ -23,7 +23,7 @@ class Dishdetail extends Component {
                     </p>
                 </li>
             )
-        })
+        });
         return(
             <div className="col-12 col-md-5 m-1">
                 <h4> Comments </h4>
@@ -38,13 +38,13 @@ class Dishdetail extends Component {
         if (dish != null){
             return(
                 <div className="col-12 col-md-5 m-1">
-                    <card>
+                    <Card>
                         <CardImg width="100%" src={dish.image} alt={dish.name} />
                         <CardBody>
                             <CardTitle>{dish.name}</CardTitle>
                             <CardText>{dish.description}</CardText>
                         </CardBody>
-                    </card>
+                    </Card>
                 </div>
             );
         }
